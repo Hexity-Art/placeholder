@@ -1,6 +1,8 @@
 import './App.css';
-import discord from './assets/discord_white.png';
-import twitter from './assets/twitter_white.png';
+import discord_white from './assets/discord_white.svg';
+import twitter_white from './assets/twitter_white.svg';
+import discord_yellow from './assets/discord_yellow.svg';
+import twitter_yellow from './assets/twitter_yellow.svg';
 
 const App = () => {
 	return (
@@ -29,10 +31,18 @@ const Main = () => {
 					<span>coming soon</span>
 					<span className = "SocialRow" >
 						<a href = "https://discord.gg/n9wCaPHhUA" target = "_blank" rel = "noopener noreferrer" >
-							<img src = { discord } alt = "discord" />
+							<img 
+								src = { discord_white } alt = "discord"
+								onMouseOver = { e => (e.currentTarget.src = discord_yellow) }
+								onMouseOut = { e => (e.currentTarget.src = discord_white) }
+							/>
 						</a>
 						<a href = "https://twitter.com/HexityArt" target = "_blank" rel = "noopener noreferrer" >
-							<img src = { twitter } alt = "twitter" />
+							<img 
+								src = { twitter_white } alt = "twitter"
+								onMouseOver = { e => (e.currentTarget.src = twitter_yellow) }
+								onMouseOut = { e => (e.currentTarget.src = twitter_white) }
+							/>
 						</a>
 					</span>
 				</div>
@@ -41,7 +51,7 @@ const Main = () => {
 				</div>
 				<div className = "Footer" >
 					<span>a community driven marketplace built for artists made by builders</span>
-					<span>coming soon</span>
+					{ window.innerWidth > 1300 && <span>coming soon</span> }
 				</div>
 			</div>
 		
