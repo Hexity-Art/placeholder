@@ -1,9 +1,50 @@
+@font-face {
+	font-family: 'GT-Walsheim-Regular';
+	src: local('GT-Walsheim-Regular'), url("./fonts/GT-Walsheim-Regular.woff2") format('woff2');
+}
+
+@font-face {
+	font-family: 'GTFOpposit-Regular';
+	src: local('GTFOpposit-Regular'), url("./fonts/GTFOpposit-Regular.woff2") format('woff2');
+}
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+
 .App {
 	text-align: center;
 	overflow: hidden;
+	min-height: 100vh;
+	background-image: url(./assets/hexityBG.jpeg);
+	background-size: cover;
+	overflow: hidden;
 }
 
-.Ticker {
+.TickerContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -11,7 +52,19 @@
 	height: 58px;
 	background-color: #EBDF71;
 	vertical-align: middle;
-	z-index: 10000;
+}
+
+.Ticker {
+	width: 9600%;
+	height: 20px;
+	-webkit-animation-iteration-count: infinite; 
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-name: ticker;
+	-webkit-animation-duration: 30;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-name: ticker;
+	animation-duration: 1200s;
 }
 
 .Main {
@@ -19,12 +72,9 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-width: 105vw;
-	min-height: 100vh;
-	background-image: url(./assets/hexityBG.jpeg);
-	background-size: cover;
-	color: #FFFFFF;
-	overflow: hidden;
+	min-width: 100vw;
+	min-height: calc(100vh - 58px);
+	
 }
 
 .Container {
@@ -32,11 +82,14 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	min-height: calc(90vh - 58px);
+	min-height: calc(90vh - 64px);
 	min-width: 90vw;
 	border: 2px solid #FFFFFF;
+	color: #FFFFFF;
 	border-radius: 50px;
 	overflow: hidden;
+	font-family: 'GT-Walsheim-Regular';
+	margin: 2.5%;
 }
 
 .Header,
@@ -64,4 +117,5 @@
 
 .Hexity {
 	font-size: 100px;
+	font-family: 'GTFOpposit-Regular';
 }
