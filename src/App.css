@@ -1,0 +1,67 @@
+.App {
+	text-align: center;
+	overflow: hidden;
+}
+
+.Ticker {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 58px;
+	background-color: #EBDF71;
+	vertical-align: middle;
+	z-index: 10000;
+}
+
+.Main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 105vw;
+	min-height: 100vh;
+	background-image: url(./assets/hexityBG.jpeg);
+	background-size: cover;
+	color: #FFFFFF;
+	overflow: hidden;
+}
+
+.Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: calc(90vh - 58px);
+	min-width: 90vw;
+	border: 2px solid #FFFFFF;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+.Header,
+.Content,
+.Footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	min-height: calc(10vh - 2px);
+	min-width: 90%;
+}
+
+.SocialRow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100px;
+}
+
+.Content {
+	justify-content: center;
+}
+
+.Hexity {
+	font-size: 100px;
+}
