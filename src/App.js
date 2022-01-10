@@ -50,7 +50,7 @@ const Main = () => {
 					<span className = "Hexity" >hexity</span>
 				</div>
 				<div className = "Footer" >
-					<span>a community driven marketplace built for artists made by builders</span>
+					<span>a community driven marketplace built for artists, made by builders</span>
 					{ window.innerWidth > 1300 && <span>coming soon</span> }
 				</div>
 			</div>
